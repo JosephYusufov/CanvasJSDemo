@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="./static/img/favicon.ico">
+    <title>CanvasJS Demo</title>
+    
+
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                zoomEnabled: true,
+                title: {
+                    text: "Total coal consumption for electric power, by state vs Per capita personal income"
+                },
+                axisX: {
+                    title: "Per capita personal income (Dollars)"
+                    //minimum: 790,
+                    //maximum: 2260
+                },
+                axisY: {
+                    title: "Total coal consumption for electric power, by state (short tons)"
+                },
+                data: [{
+                    type: "scatter",
+                    toolTipContent: "{state}<br><b>Dollars: </b>{x}<br/><b>short tons: </b>{y}",
+                    dataPoints: [
+                            { x: 40467, y: 16233586, state: "Alabama" },							
+						
+                            { x: 56794, y: 707913, state: "Alaska" },
+																		
+                            { x: 42505, y: 16813552, state: "Arizona" },
+						
+                            { x: 41520, y: 17452295, state: "Arkansas" },												
+						    { x: 60156, y: 0, state: "California" },
+						
+                            { x: 55335, y: 15266074, state: "Colorado" },
+						
+                            { x: 72213, y: 220578, state: "Connecticut" },
+						
+                            { x: 50350, y: 166596, state: "Delaware" },
+
+                            { x: 47869, y: 13365395.99, state: "Florida" },						
+						
+                            { x: 44536, y: 16937985, state: "Georgia" },
+						
+                            { x: 53943, y: 35493118, state: "Illinois" },
+												
+                            { x: 45225, y: 39161490, state: "Indiana" },
+												
+                            { x: 47458, y: 16231837, state: "Iowa" },
+						
+                            { x: 48869, y: 13136167, state: "Kansas" },
+						
+                            { x: 40999, y: 28566789, state: "Kentucky" },
+						
+                            { x: 43938, y: 8110980, state: "Louisiana" },
+						
+                            { x: 46570, y: 62360, state: "Maine" },
+						
+                            { x: 60512, y: 4481491, state: "Maryland" },
+						
+                            { x: 68233, y: 0, state: "Massachusetts" },
+						
+                            { x: 46258, y: 24568693, state: "Michigan" },
+
+                            { x: 54919, y: 13709684, state: "Minnesota" },
+						
+                            { x: 36375, y: 4505930, state: "Mississippi" },
+						
+                            { x: 45744, y: 37126565, state: "Missouri" },
+						
+                            { x: 45312, y: 8694506, state: "Montana" },
+						
+                            { x: 50663, y: 14306981, state: "Nebraska" },
+						
+                            { x: 46914, y: 1411665, state: "Nevada" },
+						
+                            { x: 58397, y: 286741, state: "New Hampshire" },
+						
+                            { x: 64924, y: 648154, state: "New Jersey" },
+						
+                            { x: 39521, y: 7261657, state: "New Mexico" },
+						
+                            { x: 65644, y: 271938, state: "New York" },
+						
+                            { x: 44180, y: 12566943, state: "North Carolina" },
+						
+                            { x: 52669, y: 23101890, state: "North Dakota" },
+						
+                            { x: 46651, y: 25148339, state: "Ohio" },
+						
+                            { x: 43634, y: 9541239, state: "Oklahoma" },
+
+                            { x: 48372, y: 895208, state: "Oregon" },
+						
+                            { x: 53144, y: 23347902, state: "Pennsylvania" },
+						
+                            { x: 42081, y: 8282151, state: "South Carolina" },
+						
+                            { x: 49554, y: 1519116, state: "South Dakota" },
+						
+                            { x: 44950, y: 10358841, state: "Tennessee" },
+						
+                            { x: 47929, y: 75688982, state: "Texas" },
+						
+                            { x: 44002, y: 12331680, state: "Utah" },
+						
+                            { x: 55306, y: 4808015, state: "Virginia" },
+						
+                            { x: 58550, y: 3628396, state: "Washington" },
+						
+                            { x: 38644, y: 25710645, state: "West Virginia" },
+						
+                            { x: 49290, y: 19482575, state: "Wisconsin" },
+						
+                            { x: 56377, y: 24150605, state: "Wyoming" },
+						
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+
+
+</head>
+<body>
+
+  <div class="container">
+	<h4 class="display-4 text-center">CanvasJS Demo</h4>
+	<h3 class="text-center">View page source to see the code</h3>
+	<h3 class="text-center">Docs: <a href="https://canvasJS.com">https://canvasJS.com</a> </h3>
+	<br>
+	<hr>
+	<br>
+	<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+  </div>
+
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
